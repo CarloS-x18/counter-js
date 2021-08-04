@@ -1,0 +1,84 @@
+:root {
+    --font: 'Georama', sans-serif;
+    --bg-color: #e4e4e4;
+    --colorPrincipal: #18c598;
+    --black: #444444;
+    --blue: rgb(0, 149, 218);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+/* Globles */
+body {
+    height: 100vh;
+    font-family: var(--font);
+    background-color: var(--bg-color);
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/*section*/
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.section__title {
+    font-size: 10rem;
+    color: var(--black);
+    margin-bottom: 5rem;
+}
+.section__contador {
+    font-size: 18rem;
+    color: white;
+    margin-bottom: 5rem;
+    background-color: var(--colorPrincipal);
+    padding: 0 4rem;
+    border-radius: 10px;
+}
+.button {
+    font-size: 2rem;
+    background-color: transparent;
+    border: 3px solid var(--black);
+    border-radius: 6px;
+    margin-right: 2rem;
+    padding: .8rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: var(--black);
+}
+.button:last-of-type {
+    margin-right: 0;
+}
+.button:hover {
+    border: 3px solid var(--blue);
+}
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 565px) {
+    .section__title {
+        font-size: 6rem;
+    }
+    .section__buttons {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+    .button {
+        margin-right: 0;
+    }
+}
