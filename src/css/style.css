@@ -82,7 +82,7 @@ h1, h2, h3, p {
         margin-right: 0;
     }
     .button:hover {
-        border: none;
+        border: 3px solid var(--black);
     }
     .button:active {
         transform: translateY(-1px);
